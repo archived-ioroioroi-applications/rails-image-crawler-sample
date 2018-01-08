@@ -1,0 +1,25 @@
+<div class="col-xs-12">
+  <a class="h1" href="/administration/index">Administration#show</a>
+  <p>Find me in app/views/administration/show.html.erb</p>
+</div>
+
+<div class="col-xs-12">
+  <h3><%= @rm_image %></h3>
+  <h1>IMGPicker</h1>
+  <h3><%= @host %></h3>
+  <p>your request imgs here!</p>
+</div>
+
+<% @pick_imgs.each do |pick_img| %>
+  <div class="col-xs-3 grid-img">
+    <div>
+      <a href="<%= pick_img[:ref] %>">
+        <img class="img-responsive img-thumbnail center-block" src="<%= pick_img[:ref] %>" alt="img"/>
+      </a>
+    </div>
+    <div>
+      <p>columns: <%= pick_img[:columns] %></p>
+      <p>rows: <%= pick_img[:rows] %></p>
+    </div>
+  </div>
+<% end %>

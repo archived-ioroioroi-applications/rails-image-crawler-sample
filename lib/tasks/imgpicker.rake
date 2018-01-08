@@ -1,0 +1,2 @@
+namespace :imgpicker do
+end

@@ -1,0 +1,25 @@
+<div class="col-xs-12">
+  <h1>IMGPicker</h1>
+  <p>post your request URL</p>
+</div>
+
+<div class="col-xs-12 form-group">
+  <%= form_tag(main_index_path, method: :post) do %>
+    <div>
+      <p>URL : </p>
+      <input type="url" name="imgpick-url" required>
+    </div>
+    <div>
+      <p>DEPTH : </p>
+      <input type="number" name="imgpick-depth" required>
+    </div>
+    <div>
+      <p>SIZE : </p>
+      height : <input type="number" name="imgpick-height" required>
+      width : <input type="number" name="imgpick-width" required>
+    </div>
+    <div>
+      <input type="submit" value="PICK UP">
+    </div>
+  <% end %>
+</div>

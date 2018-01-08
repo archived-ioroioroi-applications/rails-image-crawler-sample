@@ -1,0 +1,30 @@
+<div class="col-xs-12">
+  <a class="h1" href="/administration/index">Administration#index</a>
+  <p>Find me in app/views/administration/index.html.erb</p>
+</div>
+
+<div class="col-xs-12">
+  <h1>IMGPicker</h1>
+  <p>post your request URL</p>
+</div>
+
+<div class="col-xs-12 form-group">
+  <%= form_tag(administration_show_path, method: :get) do %>
+    <div>
+      <p>URL : </p>
+      <input type="url" name="imgpick_url" required>
+    </div>
+    <div>
+      <p>DEPTH : </p>
+      <input type="number" name="imgpick_depth"
+    </div>
+    <div>
+      <p>SIZE : </p>
+      height : <input type="number" name="imgpick_height">
+      width : <input type="number" name="imgpick_width">
+    </div>
+    <div>
+      <input type="submit" value="PICK UP">
+    </div>
+  <% end %>
+</div>
